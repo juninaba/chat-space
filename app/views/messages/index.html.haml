@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %title ChatSpace
+    %link{:href => "application.scss", :rel => "stylesheet"}/
+  %body
+    .topbar チャットグループが作成されました
+    .contents
+      = render partial: "sidebar"
+      .chat
+        .header
+          .left-header
+            .left-header__title サンプル
+            %ul.left-header__members
+              Member:
+              %li.member ryunosukemaehira
+          .right-header
+            %a.right-header__button{:href => ""} Edit
+        .messages
+          = render partial: "message"
+        = render partial: "form"
