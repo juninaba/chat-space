@@ -7,7 +7,7 @@
     %link{:href => "application.scss", :rel => "stylesheet"}/
   %body
     .contents
-      = render partial: "sidebar"
+      = render partial: "shared/sidebar"
       .chat
         .header
           .left-header
@@ -16,7 +16,7 @@
               Member:
               %li.member ryunosukemaehira
           .right-header
-            %a.right-header__button{:href => ""} Edit
+            %a.right-header__button{href: ""} Edit
         .messages
           = render partial: "message"
         = render partial: "form"
