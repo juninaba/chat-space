@@ -14,7 +14,6 @@ html,body {
   display: flex;
   height: 100%;
   width:100%;
-
   .chat {
     background-color: $white;
     width: calc(100vw - 300px);
@@ -25,12 +24,12 @@ html,body {
       border-bottom: 1px solid #eeeeee;
       .left-header {
         float: left;
-        .left-header__title {
+        &__title {
           margin-top: 35px;
           font-size: 20px;
           color: $black;
         }
-        .left-header__members {
+        &__members {
           color: $lightGray;
           list-style: none;
           margin-top: 15px;
@@ -49,7 +48,7 @@ html,body {
         line-height: 40px;
         margin-top: 28px;
         padding: 0 20px;
-        .right-header__button {
+        &__button {
           color: $lightBlue;
           text-decoration: none;
         }
@@ -64,14 +63,14 @@ html,body {
         margin-bottom: 40px;
         .upper-message {
           display: flex;
-          .upper-message__user-name {
+          &__user-name {
             font-size: 16px;
             font-weight: bold;
             color: $blackLight;
             margin-right: 10px;
             float: left;
           }
-          .upper-message__date {
+          &__date {
             font-size: 12px;
             color: $lightGray;
             padding-left: 10px;
@@ -79,7 +78,7 @@ html,body {
         }
         .lower-message {
           margin-top: 10px;
-          .lower-message__content {
+          &__content {
             font-size: 14px;
             color: $blackLight;
           }
@@ -89,8 +88,8 @@ html,body {
     .form {
       background-color: #dddddd;
       height: 90px;
-      padding: 20px 40px 20px 40px;
-      .form__message {
+      padding: 20px 40px;
+      &__message {
         position: relative;
         border: none;
         float: left;
@@ -99,7 +98,7 @@ html,body {
         width: calc(100% - 120px);
         color: $blackLight;
       }
-        .form__mask {
+        &__mask {
           position: absolute;
           right: 170px;
           .icon {
@@ -110,7 +109,7 @@ html,body {
             display: none;
           }
         }
-      .form__submit {
+      &__submit {
         background-color: $lightBlue;
         border: none;
         color: $white;
@@ -118,6 +117,7 @@ html,body {
         height: 50px;
         margin-left: 15px;
         padding: 0 30px;
+        font-size: 16px;
       }
     }
   }

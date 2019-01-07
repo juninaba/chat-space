@@ -1,11 +1,8 @@
 .groups
-  %ul
-    %li.group
-      .group__name 神
-      %p.group__message まだメッセージはありません
-    %li.group
-      .group__name aeaaaaaa
-      %p.group__message まだメッセージはありません
-    %li.group
-      .group__name sampleグループ
-      %p.group__message まだメッセージはありません
+  - current_user.groups.each do |group|
+    %a
+      = link_to group_messages_path(group) do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません
