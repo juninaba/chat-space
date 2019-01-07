@@ -1,19 +1,19 @@
 .sidebar {
-    height: 100vh;
     background-color: #2f3e51;
     width: 300px;
     float: left;
+    height: 100vh;
     .header {
       background-color: #253141;
       height: 100px;
       padding: 0 20px;
-      .header__user-name {
+      &__user-name {
         color: $white;
         font-size: 16px;
         font-weight: bold;
         line-height: 100px;
       }
-      .header__icon {
+      &__icon {
         float: right;
         a {
           color: white;
@@ -30,12 +30,13 @@
         .group__name {
           color: $white;
           font-size: 15px;
-          margin: 20px 0 5px;
+          padding-top: 20px;
         }
         .group__message {
           color: $white;
           font-size: 11px;
-          margin-bottom: 40px;
+          margin-top: 5px;
+          padding-bottom: 30px;
         }
       }
     }
