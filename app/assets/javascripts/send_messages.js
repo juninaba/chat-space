@@ -47,9 +47,8 @@ $(function(){
       alert('入力してください');
     })
   })
-  $(function(){
-    setInterval(update, 5000);
-  })
+
+  setInterval(update, 5000);
 
    function update(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
