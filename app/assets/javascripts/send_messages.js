@@ -44,7 +44,36 @@ $(function(){
       scroll();
     })
     .fail(function(){
-      alert('error');
+      alert('入力してください');
     })
   })
+
+  setInterval(update, 5000);
+
+   function update(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      if($('.messages')[0]){
+        var message_id = $('.message').last().data('id') || 0;
+      }
+      $.ajax({
+       url: location.href,
+       type: 'GET',
+       data: {
+        message: { id: message_id }
+       },
+       dataType: 'json'
+      })
+      .always(function(messages){
+        if (messages.length !== 0){
+          messages.forEach(function(message){
+            var html = buildHTML(message);
+            $('.messages').append(html)
+            scroll();
+          })
+        }
+      })
+    } else {
+      clearInterval();
+    }
+  }
 })
