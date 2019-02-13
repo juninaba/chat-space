@@ -67,7 +67,7 @@ $(function(){
         if (messages.length !== 0){
           messages.forEach(function(message){
             var html = buildHTML(message);
-            $('.messages').append(html)
+            // $('.messages').append(html)
             scroll();
           })
         }
